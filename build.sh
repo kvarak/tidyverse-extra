@@ -1,8 +1,10 @@
 #!/bin/bash -x
 
+version=0.4
+
 # build
-#docker build --pull -t kvarak/tidyverse-extra:latest -t kvarak/tidyverse-extra:0.3 .
+docker build --pull -t kvarak/tidyverse-extra:latest -t kvarak/tidyverse-extra:${version} .
 
 # publish
-#docker push kvarak/tidyverse-extra:0.3
-#docker push kvarak/tidyverse-extra:latest
+docker push kvarak/tidyverse-extra:${version}
+docker push kvarak/tidyverse-extra:latest
